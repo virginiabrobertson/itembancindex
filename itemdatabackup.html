@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>item banc indicators/ by item</title>
+
+    <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">-->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>    
+    
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">item banc</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a id="btn-logout"   class="nav-link px-3" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <img class="mb-4" src="logoblue.gif" alt="" width="180" height="180">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="file"></span>
+              item data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-about" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              about item banc
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-nationdata" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              nation data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-enginedata" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              item banc engine 
+            </a>
+          </li>
+  
+        </ul>
+
+       
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">item banc items prices by nation</h1>
+        
+      </div>
+
+      <h3>thank you, validators!!</h3>
+      <br>
+      <br>
+      <h3>latest entries by item...</h3>
+      <br>
+      
+      <p>
+      <span id="theobjectName1"></span> in <span id="thenewCountry1"></span> is $<span id="thenewPrice1"></span>
+      <br>
+      <span id="theobjectName2"></span> in <span id="thenewCountry2"></span> is $<span id="thenewPrice2"></span>
+      <br>
+      <span id="theobjectName3"></span> in <span id="thenewCountry3"></span> is $<span id="thenewPrice3"></span>
+      <br>
+      <span id="theobjectName4"></span> in <span id="thenewCountry4"></span> is $<span id="thenewPrice4"></span>
+      <br>
+      <span id="theobjectName5"></span> in <span id="thenewCountry5"></span> is $<span id="thenewPrice5"></span>
+      <br>
+      <span id="theobjectName6"></span> in <span id="thenewCountry6"></span> is $<span id="thenewPrice6"></span>
+      <br>
+      <span id="theobjectName7"></span> in <span id="thenewCountry7"></span> is $<span id="thenewPrice7"></span>
+      <br>
+      <span id="theobjectName8"></span> in <span id="thenewCountry8"></span> is $<span id="thenewPrice8"></span>
+      <br>
+      <span id="theobjectName9"></span> in <span id="thenewCountry9"></span> is $<span id="thenewPrice9"></span>
+      <br>
+      <span id="theobjectName10"></span> in <span id="thenewCountry10"></span> is $<span id="thenewPrice10"></span>
+      <br>
+      <span id="theobjectName11"></span> in <span id="thenewCountry11"></span> is $<span id="thenewPrice11"></span>
+      <br>
+      <span id="theobjectName12"></span> in <span id="thenewCountry12"></span> is $<span id="thenewPrice12"></span>
+      <br>
+      <span id="theobjectName13"></span> in <span id="thenewCountry13"></span> is $<span id="thenewPrice13"></span>
+      <br>
+      <span id="theobjectName14"></span> in <span id="thenewCountry14"></span> is $<span id="thenewPrice14"></span>
+        <br>
+        <br>
+      <span id="theobjectName15"></span> in <span id="thenewCountry15"></span> is $<span id="thenewPrice15"></span>
+      <br>
+      <span id="theobjectName16"></span> in <span id="thenewCountry16"></span> is $<span id="thenewPrice16"></span>
+      <br>
+      <span id="theobjectName17"></span> in <span id="thenewCountry17"></span> is $<span id="thenewPrice17"></span>
+      <br>
+      <span id="theobjectName18"></span> in <span id="thenewCountry18"></span> is $<span id="thenewPrice18"></span>
+      <br>
+      <span id="theobjectName19"></span> in <span id="thenewCountry19"></span> is $<span id="thenewPrice19"></span>
+      <br>
+      <span id="theobjectName20"></span> in <span id="thenewCountry20"></span> is $<span id="thenewPrice20"></span>
+      <br>
+      <span id="theobjectName21"></span> in <span id="thenewCountry21"></span> is $<span id="thenewPrice21"></span>
+      <br>
+      <span id="theobjectName22"></span> in <span id="thenewCountry22"></span> is $<span id="thenewPrice22"></span>
+      <br>
+      <span id="theobjectName23"></span> in <span id="thenewCountry23"></span> is $<span id="thenewPrice23"></span>
+      <br>
+      <span id="theobjectName24"></span> in <span id="thenewCountry24"></span> is $<span id="thenewPrice24"></span>
+      <br>
+      <span id="theobjectName25"></span> in <span id="thenewCountry25"></span> is $<span id="thenewPrice25"></span>
+      <br>
+      <span id="theobjectName26"></span> in <span id="thenewCountry26"></span> is $<span id="thenewPrice26"></span>
+      <br>
+      <span id="theobjectName27"></span> in <span id="thenewCountry27"></span> is $<span id="thenewPrice27"></span>
+      <br>
+      <span id="theobjectName28"></span> in <span id="thenewCountry28"></span> is $<span id="thenewPrice28"></span>
+      <br>
+        <br>
+      <span id="theobjectName29"></span> in <span id="thenewCountry29"></span> is $<span id="thenewPrice29"></span>
+      <br>
+      <span id="theobjectName30"></span> in <span id="thenewCountry30"></span> is $<span id="thenewPrice30"></span>
+      <br>
+      <span id="theobjectName31"></span> in <span id="thenewCountry31"></span> is $<span id="thenewPrice31"></span>
+      <br>
+      <span id="theobjectName32"></span> in <span id="thenewCountry32"></span> is $<span id="thenewPrice32"></span>
+      <br>
+      <span id="theobjectName33"></span> in <span id="thenewCountry33"></span> is $<span id="thenewPrice33"></span>
+      <br>
+      <span id="theobjectName34"></span> in <span id="thenewCountry34"></span> is $<span id="thenewPrice34"></span>
+      <br>
+      <span id="theobjectName35"></span> in <span id="thenewCountry35"></span> is $<span id="thenewPrice35"></span>
+      <br>
+      <span id="theobjectName36"></span> in <span id="thenewCountry36"></span> is $<span id="thenewPrice36"></span>
+      <br>
+      <span id="theobjectName37"></span> in <span id="thenewCountry37"></span> is $<span id="thenewPrice37"></span>
+      <br>
+      <span id="theobjectName38"></span> in <span id="thenewCountry38"></span> is $<span id="thenewPrice38"></span>
+      <br>
+      <span id="theobjectName39"></span> in <span id="thenewCountry39"></span> is $<span id="thenewPrice39"></span>
+      <br>
+      <span id="theobjectName40"></span> in <span id="thenewCountry40"></span> is $<span id="thenewPrice40"></span>
+      <br>
+      <span id="theobjectName41"></span> in <span id="thenewCountry41"></span> is $<span id="thenewPrice41"></span>
+      <br>
+      <span id="theobjectName42"></span> in <span id="thenewCountry42"></span> is $<span id="thenewPrice42"></span>
+      <br>
+        <br>
+      <span id="theobjectName43"></span> in <span id="thenewCountry43"></span> is $<span id="thenewPrice43"></span>
+      <br>
+      <span id="theobjectName44"></span> in <span id="thenewCountry44"></span> is $<span id="thenewPrice44"></span>
+      <br>
+      <span id="theobjectName45"></span> in <span id="thenewCountry45"></span> is $<span id="thenewPrice45"></span>
+      <br>
+      <span id="theobjectName46"></span> in <span id="thenewCountry46"></span> is $<span id="thenewPrice46"></span>
+      <br>
+      <span id="theobjectName47"></span> in <span id="thenewCountry47"></span> is $<span id="thenewPrice47"></span>
+      <br>
+      <span id="theobjectName48"></span> in <span id="thenewCountry48"></span> is $<span id="thenewPrice48"></span>
+      <br>
+      <span id="theobjectName49"></span> in <span id="thenewCountry49"></span> is $<span id="thenewPrice49"></span>
+      <br>
+      <span id="theobjectName50"></span> in <span id="thenewCountry50"></span> is $<span id="thenewPrice50"></span>
+      <br>
+      <span id="theobjectName51"></span> in <span id="thenewCountry51"></span> is $<span id="thenewPrice51"></span>
+      <br>
+      <span id="theobjectName52"></span> in <span id="thenewCountry52"></span> is $<span id="thenewPrice52"></span>
+      <br>
+      <span id="theobjectName53"></span> in <span id="thenewCountry53"></span> is $<span id="thenewPrice53"></span>
+      <br>
+      <span id="theobjectName54"></span> in <span id="thenewCountry54"></span> is $<span id="thenewPrice54"></span>
+      <br>
+      <span id="theobjectName55"></span> in <span id="thenewCountry55"></span> is $<span id="thenewPrice55"></span>
+      <br>
+      <span id="theobjectName56"></span> in <span id="thenewCountry56"></span> is $<span id="thenewPrice56"></span>
+      <br>
+        <br>
+      <span id="theobjectName57"></span> in <span id="thenewCountry57"></span> is $<span id="thenewPrice57"></span>
+      <br>
+      <span id="theobjectName58"></span> in <span id="thenewCountry58"></span> is $<span id="thenewPrice58"></span>
+      <br>
+      <span id="theobjectName59"></span> in <span id="thenewCountry59"></span> is $<span id="thenewPrice59"></span>
+      <br>
+      <span id="theobjectName60"></span> in <span id="thenewCountry60"></span> is $<span id="thenewPrice60"></span>
+      <br>
+      <span id="theobjectName61"></span> in <span id="thenewCountry61"></span> is $<span id="thenewPrice61"></span>
+      <br>
+      <span id="theobjectName62"></span> in <span id="thenewCountry62"></span> is $<span id="thenewPrice62"></span>
+      <br>
+      <span id="theobjectName63"></span> in <span id="thenewCountry63"></span> is $<span id="thenewPrice63"></span>
+      <br>
+      <span id="theobjectName64"></span> in <span id="thenewCountry64"></span> is $<span id="thenewPrice64"></span>
+      <br>
+      <span id="theobjectName65"></span> in <span id="thenewCountry65"></span> is $<span id="thenewPrice65"></span>
+      <br>
+      <span id="theobjectName66"></span> in <span id="thenewCountry66"></span> is $<span id="thenewPrice66"></span>
+      <br>
+      <span id="theobjectName67"></span> in <span id="thenewCountry67"></span> is $<span id="thenewPrice67"></span>
+      <br>
+      <span id="theobjectName68"></span> in <span id="thenewCountry68"></span> is $<span id="thenewPrice68"></span>
+      <br>
+      <span id="theobjectName69"></span> in <span id="thenewCountry69"></span> is $<span id="thenewPrice69"></span>
+      <br>
+      <span id="theobjectName70"></span> in <span id="thenewCountry70"></span> is $<span id="thenewPrice70"></span>
+      <br>
+        <br>
+      <span id="theobjectName71"></span> in <span id="thenewCountry71"></span> is $<span id="thenewPrice71"></span>
+      <br>
+      <span id="theobjectName72"></span> in <span id="thenewCountry72"></span> is $<span id="thenewPrice72"></span>
+      <br>
+      <span id="theobjectName73"></span> in <span id="thenewCountry73"></span> is $<span id="thenewPrice73"></span>
+      <br>
+      <span id="theobjectName74"></span> in <span id="thenewCountry74"></span> is $<span id="thenewPrice74"></span>
+      <br>
+      <span id="theobjectName75"></span> in <span id="thenewCountry75"></span> is $<span id="thenewPrice75"></span>
+      <br>
+      <span id="theobjectName76"></span> in <span id="thenewCountry76"></span> is $<span id="thenewPrice76"></span>
+      <br>
+      <span id="theobjectName77"></span> in <span id="thenewCountry77"></span> is $<span id="thenewPrice77"></span>
+      <br>
+      <span id="theobjectName78"></span> in <span id="thenewCountry78"></span> is $<span id="thenewPrice78"></span>
+      <br>
+      <span id="theobjectName79"></span> in <span id="thenewCountry79"></span> is $<span id="thenewPrice79"></span>
+      <br>
+      <span id="theobjectName80"></span> in <span id="thenewCountry80"></span> is $<span id="thenewPrice80"></span>
+      <br>
+      <span id="theobjectName81"></span> in <span id="thenewCountry81"></span> is $<span id="thenewPrice81"></span>
+      <br>
+      <span id="theobjectName82"></span> in <span id="thenewCountry82"></span> is $<span id="thenewPrice82"></span>
+      <br>
+      <span id="theobjectName83"></span> in <span id="thenewCountry83"></span> is $<span id="thenewPrice83"></span>
+      <br>
+      <span id="theobjectName84"></span> in <span id="thenewCountry84"></span> is $<span id="thenewPrice84"></span>
+      </p>
+      <br>
+      
+     
+
+    </main>
+  </div>
+</div>
+
+
+<script src="bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
+
+    <script src="main.js"></script>
+   
+    <script src="validatorentries.js"></script>
+
+    
+   
+    </body>
+</html>

@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>item banc price entry for BHN items/ items</title>
+
+    <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">-->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>  
+    
+      
+    
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">item banc</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a id="btn-logout"   class="nav-link px-3" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <img class="mb-4" src="logoblue.gif" alt="" width="180" height="180">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="file"></span>
+              Validator New Entries 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-itemdata" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              item data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-nationdata" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              nation data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-enginedata" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              item banc engine 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-about" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              About item banc 
+            </a>
+          </li>
+  
+        </ul>
+
+       
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Validator price entry</h1>
+        
+      </div>
+
+      
+ 
+      <h2>item banc items</h2>
+      
+      <br>
+      <br>
+      <br>
+      <p>
+        Country
+        <input type="text" placeholder="ENTER country FIRST then" id="newcountry">
+        <button type="button" id=button0 onclick="getInputValue0();">CLICK!!</button>
+        <br>
+        <!-- Currency
+        <input type="text" placeholder="ENTER currency name" id="newcurrency">
+        <button type="button" id=button01 onclick="getInputValue01();">CLICK!!</button>
+         -->
+        <br>        
+        <br> 
+         Tuna Can 142g
+         <input type="number" placeholder="price" id="vtuna">
+         <button type="button" id=button1 onclick="getInputValue1();">enter</button>
+         <br>
+         Tomato Can 510g
+         <input type="number" placeholder="price" id="vtomato">
+         <button type="button" id=button2 onclick="getInputValue2();">enter</button>
+         <br>
+         Rice 400g
+         <input type="number" placeholder="price" id="vrice">
+         <button type="button" id=button3 onclick="getInputValue3();">enter</button>
+         <br>
+         Soap Bar 110g
+         <input type="number" placeholder="price" id="vsoap">
+         <button type="button" id=button4 onclick="getInputValue4();">enter</button>
+         <br>
+         Bottle of Water 400ml
+         <input type="number" placeholder="price" id="vwater">
+         <button type="button" id=button5 onclick="getInputValue5();">enter</button>
+         <br>
+         Paper 400 Sheets
+         <input type="number" placeholder="price" id="vpaper">
+         <button type="button" id=button6 onclick="getInputValue6();">enter</button>
+         <br>
+         Alcohol (rubbing) 230 ml
+         <input type="number" placeholder="price" id="valcohol">
+         <button type="button" id=button7 onclick="getInputValue7();">enter</button>
+         <br>
+         Coffee 400g
+         <input type="number" placeholder="price" id="vcoffee">
+         <button type="button" id=button8 onclick="getInputValue8();">enter</button>
+         <br>
+         Tea Box 20 bags 
+         <input type="number" placeholder="price" id="vtea">
+         <button type="button" id=button9 onclick="getInputValue9();">enter</button>
+         <br>
+         Toilet Paper single roll
+         <input type="number" placeholder="price" id="vtp">
+         <button type="button" id=button10 onclick="getInputValue10();">enter</button>
+         <br>
+         Socks one pair 
+         <input type="number" placeholder="price" id="vsocks">
+         <button type="button" id=button11 onclick="getInputValue11();">enter</button>
+         <br>
+         Lumber 2"x 4"x 12"
+         <input type="number" placeholder="price" id="vlumber2412">
+         <button type="button" id=button12 onclick="getInputValue12();">enter</button>
+         <br>
+         Plywood 4'x 8'x 3/4"
+         <input type="number" placeholder="price" id="vply4834">
+         <button type="button" id=button13 onclick="getInputValue13();">enter</button>
+         <br>
+         Tshirt
+         <input type="number" placeholder="price" id="vtshirt">
+         <button type="button" id=button14 onclick="getInputValue14();">enter</button>
+         <br>
+      </p>
+
+    </main>
+  </div>
+</div>
+
+<script>
+  var Country="NoCountry";
+  var basketTotal=0;
+  var basketCount=0;
+  console.log("basketTotal "+basketTotal);
+</script>
+
+<script>
+  class Item {
+    constructor (name, country, price, currency, quantity, unit, category, city ){
+    this.name=name;
+    this.country=country;
+    this.price=price;
+    this.currency=currency;
+    this.quantity=quantity;
+    this.unit=unit;
+    this.category=category;
+    this.city=city;
+    
+    }
+}
+
+  //const Country;
+    
+   // example 
+   // const tunacan {
+   // Name: “tunacan”,
+   // Country: “USA”,
+   // Price: 2,
+   // Currency: “US dollar”,
+   // Quantity:1
+   // Unit: “6oz”,
+   // Category: “food”,
+   // City: “savannah”
+   // }
+
+   
+  //  const Tunacan = new Item("tunacan","USA", 2,"US dollar", 1, "6oz", "food", "Savannah"  );
+  //  const Tomatocan = new Item("tomatocan","USA", 2,"US dollar", 1, "8oz", "food", "Savannah"  );
+  //  const Rice = new Item("rice","USA", 4,"US dollar", 1, "12 oz bag", "food", "Savannah"  );
+  //  const Soap = new Item("soap","USA", 1,"US dollar", 1, "bar", "medicine", "Savannah"  );
+  //  const Water = new Item("water","USA", 2,"US dollar", 1, "12 oz bottle", "food", "Savannah"  );
+  //  const Paper = new Item("paper","USA", 12,"US dollar", 1, "300 sheets", "paper", "Savannah"  );
+  //  const Alcohol = new Item("alcohol","USA", 2,"US dollar", 1, "8 oz", "medicine", "Savannah"  );
+  //  const Coffee = new Item("coffee","USA", 8,"US dollar", 1, "12 oz", "food", "Savannah"  );
+  //  const Tea = new Item("tea","USA", 3,"US dollar", 1, "24 bags", "food", "Savannah"  );
+  //  const Toiletpaper = new Item("toiletpaper","USA", 2,"US dollar", 1, "1 roll", "paper", "Savannah"  );
+  //  const Socks = new Item("socks","USA", 2,"US dollar", 1, "pair", "clothes", "Savannah"  );
+  //  const Lumber2412 = new Item("lumber2412","USA", 12,"US dollar", 1, "board", "building materials", "Savannah"  );
+  //  const Ply4834 = new Item("ply4834","USA", 22,"US dollar", 1, "1 sheet", "building materials", "Savannah"  );
+  //  const Tshirt = new Item("tshirt","USA", 10,"US dollar", 1, "white", "clothes", "Savannah"  );
+
+   const Tunacan = new Item;
+   const Tomatocan = new Item;
+   const Rice = new Item;
+   const Soap = new Item;
+   const Water = new Item;
+   const Paper = new Item;
+   const Alcohol = new Item;
+   const Coffee = new Item;
+   const Tea = new Item;
+   const Toiletpaper = new Item;
+   const Socks = new Item;
+   const Lumber2412 = new Item;
+   const Ply4834 = new Item;
+   const Tshirt = new Item;
+  
+</script>
+
+<script>
+    
+
+  function getInputValue0(){
+    Country=document.getElementById("newcountry").value;
+    var color0 = document.getElementById("button0");
+    color0.style.backgroundColor="blue";
+    console.log("new country " + Country);
+  }
+
+  // function getInputValue01(){
+  //   Currency=document.getElementById("newcurrency").value;
+  //   var color0 = document.getElementById("button01");
+  //   color0.style.backgroundColor="blue";
+  //   console.log("new currency " + Currency);
+  // }
+  
+
+    function getInputValue1(){
+   if (Country !== "NoCountry" ){
+     if (Country !== ''){
+      Tunacan.price=document.getElementById("vtuna").valueAsNumber;
+      var color1 = document.getElementById("button1");
+      color1.style.backgroundColor="blue";
+      setNewItemData1();
+      setNewCountryData1();
+      defineNewObject("tunacan", Country, Tunacan.price, Currency, 1, "6oz", "food", "city" );
+      console.log("new tunacan price $" + Tunacan.price + " "+ Currency);
+     }
+    }else{
+        getInputValue0();
+    } 
+    }
+    function getInputValue2(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Tomatocan.price=document.getElementById("vtomato").valueAsNumber;
+      var color2 = document.getElementById("button2");
+      color2.style.backgroundColor="blue";
+      setNewItemData2();
+      setNewCountryData2();
+      defineNewObject("tomatocan", Country, Tomatocan.price, Currency, 1, "510g", "food", "city" );
+      console.log("new tomatocan price $" + Tomatocan.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    } 
+    function getInputValue3(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){ 
+      Rice.price=document.getElementById("vrice").valueAsNumber;
+      var color3 = document.getElementById("button3");
+      color3.style.backgroundColor="blue";
+      setNewItemData3();
+      setNewCountryData3();
+      defineNewObject("rice", Country, Rice.price, Currency, 1, "400g", "food", "city" ); 
+      console.log("new rice price $" + Rice.price);
+      }
+    }else{
+        getInputValue0();
+      } 
+    } 
+    function getInputValue4(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Soap.price=document.getElementById("vsoap").valueAsNumber;
+      var color4 = document.getElementById("button4");
+      color4.style.backgroundColor="blue";
+      setNewItemData4();
+      setNewCountryData4();
+      defineNewObject("soap", Country, Soap.price, Currency, 1, "bar", "hygeine", "city" );
+      console.log("new soap price $" + Soap.price);
+      }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue5(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Water.price=document.getElementById("vwater").valueAsNumber;
+      var color5 = document.getElementById("button5");
+      color5.style.backgroundColor="blue";
+      setNewItemData5(); 
+      setNewCountryData5();
+      defineNewObject("water", Country, Water.price, Currency, 1, "400ml", "food", "city" );
+      console.log("new water price $" + Water.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue6(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){ 
+      Paper.price=document.getElementById("vpaper").valueAsNumber;
+      var color6 = document.getElementById("button6");
+      color6.style.backgroundColor="blue";
+      setNewItemData6(); 
+      setNewCountryData6();
+      defineNewObject("paper", Country, Paper.price, Currency, 1, "400 sheets", "paper", "city" );
+      console.log("new paper price $" + Paper.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue7(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Alcohol.price=document.getElementById("valcohol").valueAsNumber;
+      var color7 = document.getElementById("button7");
+      color7.style.backgroundColor="blue";
+      setNewItemData7(); 
+      setNewCountryData7();
+      defineNewObject("alcohol", Country, Alcohol.price, Currency, 1, "230ml", "hygeine", "city" );
+      console.log("new alcohol price $" + Alcohol.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue8(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Coffee.price=document.getElementById("vcoffee").valueAsNumber;
+      var color8 = document.getElementById("button8");
+      color8.style.backgroundColor="blue";
+      setNewItemData8(); 
+      setNewCountryData8();
+      defineNewObject("coffee", Country, Coffee.price, Currency, 1, "400g", "food", "city" );
+      console.log("new coffee price $" + Coffee.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue9(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Tea.price=document.getElementById("vtea").valueAsNumber;
+      var color9 = document.getElementById("button9");
+      color9.style.backgroundColor="blue";
+      setNewItemData9(); 
+      setNewCountryData9();
+      defineNewObject("tea", Country, Tea.price, Currency, 1, "20 bags", "food", "city" );
+      console.log("new tea price $" + Tea.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue10(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Toiletpaper.price=document.getElementById("vtp").valueAsNumber;
+      var color10 = document.getElementById("button10");
+      color10.style.backgroundColor="blue";
+      setNewItemData10();
+      setNewCountryData10();
+      defineNewObject("toiletpaper", Country, Toiletpaper.price, Currency, 1, "roll", "paper", "city" ); 
+      console.log("new toiletpaper price $" + Toiletpaper.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue11(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Socks.price=document.getElementById("vsocks").valueAsNumber;
+      var color11 = document.getElementById("button11");
+      color11.style.backgroundColor="blue";
+      setNewItemData11(); 
+      setNewCountryData11();
+      defineNewObject("socks", Country, Socks.price, Currency, 1, "pair", "clothing", "city" );
+      console.log("new socks price $" + Socks.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue12(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Lumber2412.price=document.getElementById("vlumber2412").valueAsNumber;
+      var color12 = document.getElementById("button12");
+      color12.style.backgroundColor="blue";
+      setNewItemData12(); 
+      setNewCountryData12();
+      defineNewObject("lumber2412", Country, Lumber2412.price, Currency, 1, "board", "building materials", "city" );
+      console.log("new lumber2412 price $" + Lumber2412.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue13(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Ply4834.price=document.getElementById("vply4834").valueAsNumber;
+      var color13 = document.getElementById("button13");
+      color13.style.backgroundColor="blue";
+      setNewItemData13();
+      setNewCountryData13();
+      defineNewObject("ply4834", Country, Ply4834.price, Currency, 1, "sheet", "building materials", "city" );
+      console.log("new ply4834 price $" + Ply4834.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    function getInputValue14(){
+    if (Country !== "NoCountry"){ 
+      if(Country !== ''){
+      Tshirt.price=document.getElementById("vtshirt").valueAsNumber;
+      var color14 = document.getElementById("button14");
+      color14.style.backgroundColor="blue";
+      setNewItemData14(); 
+      setNewCountryData14();
+      defineNewObject("tshirt", Country, Tshirt.price, Currency, 1, "white", "clothing", "city" );
+      console.log("new tshirt price $" + Tshirt.price);
+    }
+    }else{
+        getInputValue0();
+      } 
+    }
+    //const basketTotal=(Tunacan.price+Tomatocan.price +Soap.price +Water.price +Paper.price +Alcohol.price +Coffee.price +Tea.price +Toiletpaper.price +Socks.price +Lumber2412.price +Ply4834.price +Tshirt.price)
+    
+</script>
+
+<script>
+
+  
+  console.log("basketTotal "+basketTotal);
+
+setNewItemData1 = async () => {
+  const tunaquery = new Moralis.Query('Items');
+  tunaquery.equalTo("name", "tunacan")
+  const tunacan = await tunaquery.first();
+   if(tunacan){
+    tunacan.set("price", Tunacan.price);
+    tunacan.set("country", Country);
+    tunacan.set("currency", Currency);
+    await tunacan.save();
+  }
+  }
+  setNewCountryData1 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country)
+  const tunacanc = await countryquery.first();
+   if(tunacanc){
+    basketTotal=basketTotal+Tunacan.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    tunacanc.set("tunacan", Tunacan.price);
+    console.log(Tunacan.price+"is the one we want to post")
+    await tunacanc.save();
+  }
+  }
+
+  setNewItemData2 = async () => {
+  const tomatoquery = new Moralis.Query('Items');
+  tomatoquery.equalTo("name", "tomatocan")
+  const tomatocan = await tomatoquery.first();
+  if(tomatocan){
+    tomatocan.set("price", Tomatocan.price);
+    tomatocan.set("country", Country);
+    tomatocan.set("currency", Currency);
+    await tomatocan.save();
+}
+}
+setNewCountryData2 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const tomatocanc = await countryquery.first();
+   if(tomatocanc){
+    basketTotal=basketTotal+Tomatocan.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    tomatocanc.set("tomatocan", Tomatocan.price);
+    await tomatocanc.save();
+  }
+  }
+setNewItemData3 = async () => {
+  const ricequery = new Moralis.Query('Items');
+  ricequery.equalTo("name", "rice")
+  const rice = await ricequery.first();
+  if(rice){
+    rice.set("price", Rice.price);
+    rice.set("country", Country);
+    rice.set("currency", Currency);
+    await rice.save();
+}
+}
+setNewCountryData3 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const ricec = await countryquery.first();
+   if(ricec){
+    basketTotal=basketTotal+ Rice.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    ricec.set("rice", Rice.price);
+    await ricec.save();
+  }
+  }
+setNewItemData4 = async () => {
+  const soapquery = new Moralis.Query('Items');
+  soapquery.equalTo("name", "soap")
+  const soap = await soapquery.first();
+  if(soap){
+    soap.set("price", Soap.price);
+    soap.set("country", Country);
+    soap.set("currency", Currency);
+    await soap.save();
+}
+}
+setNewCountryData4 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const soapc = await countryquery.first();
+   if(soapc){
+    basketTotal=basketTotal+Soap.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    soapc.set("soap", Soap.price);
+    await soapc.save();
+  }
+  }
+setNewItemData5 = async () => {
+  const waterquery = new Moralis.Query('Items');
+  waterquery.equalTo("name", "water")
+  const water = await waterquery.first();
+  if(water){
+    water.set("price", Water.price);
+    water.set("country", Country);
+    water.set("currency", Currency);
+    await water.save();
+}
+}
+setNewCountryData5 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const waterc = await countryquery.first();
+   if(waterc){
+    basketTotal=basketTotal+Water.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    waterc.set("water", Water.price);
+    await waterc.save();
+  }
+  }
+setNewItemData6 = async () => {
+  const paperquery = new Moralis.Query('Items');
+  paperquery.equalTo("name", "paper")
+  const paper = await paperquery.first();
+  if(paper){
+    paper.set("price", Paper.price);
+    paper.set("country", Country);
+    paper.set("currency", Currency);
+    await paper.save();
+}
+}
+setNewCountryData6 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const paperc = await countryquery.first();
+   if(paperc){
+    basketTotal=basketTotal+Paper.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    paperc.set("paper", Paper.price);
+    await paperc.save();
+  }
+  }
+setNewItemData7 = async () => {
+  const alcoholquery = new Moralis.Query('Items');
+  alcoholquery.equalTo("name", "alcohol")
+  const alcohol = await alcoholquery.first();
+  if(alcohol){
+    alcohol.set("price", Alcohol.price);
+    alcohol.set("country", Country);
+    alcohol.set("currency", Currency);
+    await alcohol.save();
+}
+}
+setNewCountryData7 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const alcoholc = await countryquery.first();
+   if(alcoholc){
+    basketTotal=basketTotal+Alcohol.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    alcoholc.set("alcohol", Alcohol.price);
+    await alcoholc.save();
+  }
+  }
+setNewItemData8 = async () => {
+  const coffeequery = new Moralis.Query('Items');
+  coffeequery.equalTo("name", "coffee")
+  const coffee = await coffeequery.first();
+  if(coffee){
+    coffee.set("price", Coffee.price);
+    coffee.set("country", Country);
+    coffee.set("currency", Currency);
+    await coffee.save();
+}
+}
+setNewCountryData8 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const coffeec = await countryquery.first();
+   if(coffeec){
+    basketTotal=basketTotal+Coffee.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    coffeec.set("coffee", Coffee.price);
+    await coffeec.save();
+  }
+  }
+setNewItemData9 = async () => {
+  const teaquery = new Moralis.Query('Items');
+  teaquery.equalTo("name", "tea")
+  const tea = await teaquery.first();
+  if(tea){
+    tea.set("price", Tea.price);
+    tea.set("country", Country);
+    tea.set("currency", Currency);
+    await tea.save();
+}
+}
+setNewCountryData9 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const teac = await countryquery.first();
+   if(teac){
+    basketTotal=basketTotal+Tea.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    teac.set("tea", Tea.price);
+    await teac.save();
+  }
+  }
+setNewItemData10 = async () => {
+  const toiletpaperquery = new Moralis.Query('Items');
+  toiletpaperquery.equalTo("name", "toiletpaper")
+  const toiletpaper = await toiletpaperquery.first();
+  if(toiletpaper){
+    toiletpaper.set("price", Toiletpaper.price);
+    toiletpaper.set("country", Country);
+    toiletpaper.set("currency", Currency);
+    await toiletpaper.save();
+}
+}
+setNewCountryData10 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const toiletpaperc = await countryquery.first();
+   if(toiletpaperc){
+    basketTotal=basketTotal+Toiletpaper.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    toiletpaperc.set("toiletpaper", Toiletpaper.price);
+    await toiletpaperc.save();
+  }
+  }
+setNewItemData11 = async () => {
+  const socksquery = new Moralis.Query('Items');
+  socksquery.equalTo("name", "socks")
+  const socks = await socksquery.first();
+  if(socks){
+    socks.set("price", Socks.price);
+    socks.set("country", Country);
+    socks.set("currency", Currency);
+    await socks.save();
+}
+}
+setNewCountryData11 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const socksc = await countryquery.first();
+   if(socksc){
+    basketTotal=basketTotal+Socks.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    socksc.set("socks", Socks.price);
+    await socksc.save();
+  }
+  }
+setNewItemData12 = async () => {
+  const lumber2412query = new Moralis.Query('Items');
+  lumber2412query.equalTo("name", "lumber2412")
+  const lumber2412 = await lumber2412query.first();
+  if(lumber2412){
+    lumber2412.set("price", Lumber2412.price);
+    lumber2412.set("country", Country);
+    lumber2412.set("currency", Currency);
+    await lumber2412.save();
+}
+}
+setNewCountryData12 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const lumber2412c = await countryquery.first();
+   if(lumber2412c){
+    basketTotal=basketTotal+Lumber2412.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    lumber2412c.set("lumber2412", Lumber2412.price);
+    await lumber2412c.save();
+  }
+  }
+setNewItemData13 = async () => {
+  const ply4834query = new Moralis.Query('Items');
+  ply4834query.equalTo("name", "ply4834")
+  const ply4834 = await ply4834query.first();
+  if(ply4834){
+    ply4834.set("price", Ply4834.price);
+    ply4834.set("country", Country);
+    ply4834.set("currency", Currency);
+    await ply4834.save();
+}
+}
+setNewCountryData13 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const ply4834c = await countryquery.first();
+   if(ply4834c){
+    basketTotal=basketTotal+Ply4834.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    ply4834c.set("ply4834", Ply4834.price);
+    await ply4834c.save();
+  }
+  }
+setNewItemData14 = async () => {
+  const tshirtquery = new Moralis.Query('Items');
+  tshirtquery.equalTo("name", "tshirt")
+  const tshirt = await tshirtquery.first();
+  if(tshirt){
+    tshirt.set("price", Tshirt.price);
+    tshirt.set("country", Country);
+    tshirt.set("currency", Currency);
+    await tshirt.save();
+}
+}
+setNewCountryData14 = async () => {
+  const countryquery = new Moralis.Query('CountriesData');
+  countryquery.equalTo("Country", Country);
+  const tshirtc = await countryquery.first();
+   if(tshirtc){
+    basketTotal=basketTotal+Tshirt.price;
+    basketCount=basketCount+1;
+    console.log("basketTotal "+basketTotal); 
+    tshirtc.set("tshirt", Tshirt.price);
+    if(basketCount===14){
+    tshirtc.set("Basket", basketTotal);
+    }
+    await tshirtc.save();
+  }
+  }
+  // setNewCountryDataBasket = async () => {
+  // const countryquery = new Moralis.Query('CountriesData');
+  // countryquery.equalTo("Country", Country);
+  // const basketc = await countryquery.first();
+  //  if(basketc){
+  //   if (basketCount===14){
+  //   basketc.set("Basket", basketTotal);
+  //   console.log(basketTotal)
+  //   await basketc.save();
+  //   }
+  // }
+  // }
+
+
+
+
+// defineNewObject = async () => {
+//     const vdata = Moralis.Object.extend("Vdata");
+//     const entry3 = new vdata();
+//     entry3.set('name', 'tunacan');
+//     entry3.set('country', 'USA');
+//     entry3.set('price', 3);
+//     entry3.set('currency', 'US dollar');
+//     entry3.set('quantity', 1);
+//     entry3.set('unit', '6oz');
+//     entry3.set('category','food');
+//     entry3.set('city', 'savannah');
+//     //entry2.set("parent", tunacan);
+//     await entry3.save();
+//     //return entry3;
+// }
+</script>
+
+
+    <script src="bootstrap.bundle.min.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+
+    <script src="main.js"></script>
+    <script src="validatordata.js"></script>
+     
+    
+   
+    </body>
+</html>

@@ -1,0 +1,303 @@
+
+{
+"$schema":"http://json-schema.org/draft-04/schema",
+"title": "Item Banc Items",
+"description": "A first list of basic human need items",
+"type": "object",
+
+"Items": {
+   "Item1": { 
+    "name":"tunacan",
+    "country":"USA",
+    "price":1,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "6 oz",
+    "category": "food",
+    "city":"Savannah"
+   },
+
+   "Item2": { 
+    "name":"tomatocan",
+    "country":"USA",
+    "price":3,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "12 oz",
+    "category": "food",
+    "city":"Savannah"
+   },
+
+   "Item3": { 
+    "name":"rice",
+    "country":"USA",
+    "price":6,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "12 oz",
+    "category": "food",
+    "city":"Savannah"
+   },
+
+   "Item4": { 
+    "name":"soap",
+    "country":"USA",
+    "price":1,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "bar",
+    "category": "hygeine",
+    "city":"Savannah"
+   },
+
+   "Item5": { 
+    "name":"water",
+    "country":"USA",
+    "price":2,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "8 oz",
+    "category": "food",
+    "city":"Savannah"
+   },
+
+   "Item6": { 
+    "name":"paper",
+    "country":"USA",
+    "price":12,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "400 sheets",
+    "category": "paper",
+    "city":"Savannah"
+   },
+
+   "Item7": { 
+    "name":"alcohol",
+    "country":"USA",
+    "price":2,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "8 oz",
+    "category": "hygeine",
+    "city":"Savannah"
+   },
+
+   "Item8": { 
+    "name":"coffee",
+    "country":"USA",
+    "price":9,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "8 oz",
+    "category": "food",
+    "city":"Savannah"
+   },
+
+   "Item9": { 
+    "name":"tea",
+    "country":"USA",
+    "price":3,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "24 bags",
+    "category": "food",
+    "city":"Savannah"
+   },
+
+   "Item10": { 
+    "name":"toiletpaper",
+    "country":"USA",
+    "price":1,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "roll",
+    "category": "paper",
+    "city":"Savannah"
+   },
+
+   "Item11": { 
+    "name":"socks",
+    "country":"USA",
+    "price":4,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "pair",
+    "category": "clothing",
+    "city":"Savannah"
+   },
+
+   "Item12": { 
+    "name":"lumber248",
+    "country":"USA",
+    "price":9,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "board",
+    "category": "building materials",
+    "city":"Savannah"
+   },
+
+   "Item13": { 
+    "name":"ply4834",
+    "country":"USA",
+    "price":25,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "sheet",
+    "category": "building materials",
+    "city":"Savannah"
+   },
+
+   "Item14": { 
+    "name":"tshirt",
+    "country":"USA",
+    "price":10,
+    "currency":"US dollar",
+    "quantity": 1,
+    "unit": "white",
+    "category": "clothing",
+    "city":"Savannah"
+   }
+   },
+
+   "required": ["Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7", "Item8", "Item9", "Item10", "Item11", "Item12", "Item13", "Item14"]
+}
+   
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

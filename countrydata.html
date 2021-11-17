@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>item banc indicators/ by nation</title>
+
+    <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">-->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>    
+    
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">item banc</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a id="btn-logout"   class="nav-link px-3" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <img class="mb-4" src="logoblue.gif" alt="" width="180" height="180">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="file"></span>
+              nation data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-itemdata" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              item data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-enginedata" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              item banc engine
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="get-about" class="nav-link" href="#">
+              <span data-feather="file"></span>
+              about item banc 
+            </a>
+          </li>
+  
+        </ul>
+
+       
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">item banc entries/ by nation</h1>
+        
+      </div>
+
+      
+            
+      <h3>
+        enter a country: 
+        <br> 
+      </h3>
+      <h6>  
+        <input id= "countryinput" placeholder="United States">
+        <button id="countrybutton" onclick="getNation();">enter</button>
+        <br>
+      </h6>
+   
+
+    <p>
+      
+      <span id="countryTitle1" style="color:blue" style="font-weight:bold"></span>
+      
+      <span id="countryTitle" style="color:blue" style="font-weight:bold"></span>
+      
+     <br>
+      <span id="theobjectName1"></span> in <span id="thenewCountry1"></span> is <span id="thenewPrice1"></span> <span id="thenewCurrency1"></span>
+      <br>
+      <span id="theobjectName2"></span> in <span id="thenewCountry2"></span> is <span id="thenewPrice2"></span> <span id="thenewCurrency2"></span>
+      <br>
+      <span id="theobjectName3"></span> in <span id="thenewCountry3"></span> is <span id="thenewPrice3"></span> <span id="thenewCurrency3"></span>
+      <br>
+      <span id="theobjectName4"></span> in <span id="thenewCountry4"></span> is <span id="thenewPrice4"></span> <span id="thenewCurrency4"></span>
+      <br>
+      <span id="theobjectName5"></span> in <span id="thenewCountry5"></span> is <span id="thenewPrice5"></span> <span id="thenewCurrency5"></span>
+      <br>
+      <span id="theobjectName6"></span> in <span id="thenewCountry6"></span> is <span id="thenewPrice6"></span> <span id="thenewCurrency6"></span>
+      <br>
+      <span id="theobjectName7"></span> in <span id="thenewCountry7"></span> is <span id="thenewPrice7"></span> <span id="thenewCurrency7"></span>
+      <br>
+      <span id="theobjectName8"></span> in <span id="thenewCountry8"></span> is <span id="thenewPrice8"></span> <span id="thenewCurrency8"></span>
+      <br>
+      <span id="theobjectName9"></span> in <span id="thenewCountry9"></span> is <span id="thenewPrice9"></span> <span id="thenewCurrency9"></span>
+      <br>
+      <span id="theobjectName10"></span> in <span id="thenewCountry10"></span> is <span id="thenewPrice10"></span> <span id="thenewCurrency10"></span>
+      <br>
+      <span id="theobjectName11"></span> in <span id="thenewCountry11"></span> is <span id="thenewPrice11"></span> <span id="thenewCurrency11"></span>
+      <br>
+      <span id="theobjectName12"></span> in <span id="thenewCountry12"></span> is <span id="thenewPrice12"></span> <span id="thenewCurrency12"></span>
+      <br>
+      <span id="theobjectName13"></span> in <span id="thenewCountry13"></span> is <span id="thenewPrice13"></span> <span id="thenewCurrency13"></span>
+      <br>
+      <span id="theobjectName14"></span> in <span id="thenewCountry14"></span> is $<span id="thenewPrice14"></span> <span id="thenewCurrency14"></span>
+      <br>
+      <br>
+       The basket in USD is $<span id="theBasketinUSD"></span>    
+    
+    </p>
+
+    <h3>
+      enter a country: 
+      <br> 
+    </h3>
+    <h6>  
+      <input id= "countryinput2" placeholder="Jamaica">
+      <button id="countrybutton2" onclick="getNation2();">enter</button>
+      <br>
+    </h6>
+    
+    <p>
+      
+      <span id="countryTitle2" style="color:blue" style="font-weight:bold"></span>
+      
+      <br>
+      <span id="theobjectName15"></span> in <span id="thenewCountry15"></span> is <span id="thenewPrice15"></span> <span id="thenewCurrency15"></span>
+      <br>
+      <span id="theobjectName16"></span> in <span id="thenewCountry16"></span> is <span id="thenewPrice16"></span> <span id="thenewCurrency16"></span>
+      <br>
+      <span id="theobjectName17"></span> in <span id="thenewCountry17"></span> is <span id="thenewPrice17"></span> <span id="thenewCurrency17"></span>
+      <br>
+      <span id="theobjectName18"></span> in <span id="thenewCountry18"></span> is <span id="thenewPrice18"></span> <span id="thenewCurrency18"></span>
+      <br>
+      <span id="theobjectName19"></span> in <span id="thenewCountry19"></span> is <span id="thenewPrice19"></span> <span id="thenewCurrency19"></span>
+      <br>
+      <span id="theobjectName20"></span> in <span id="thenewCountry20"></span> is <span id="thenewPrice20"></span> <span id="thenewCurrency20"></span>
+      <br>
+      <span id="theobjectName21"></span> in <span id="thenewCountry21"></span> is <span id="thenewPrice21"></span> <span id="thenewCurrency21"></span>
+      <br>
+      <span id="theobjectName22"></span> in <span id="thenewCountry22"></span> is <span id="thenewPrice22"></span> <span id="thenewCurrency22"></span>
+      <br>
+      <span id="theobjectName23"></span> in <span id="thenewCountry23"></span> is <span id="thenewPrice23"></span> <span id="thenewCurrency23"></span>
+      <br>
+      <span id="theobjectName24"></span> in <span id="thenewCountry24"></span> is <span id="thenewPrice24"></span> <span id="thenewCurrency24"></span>
+      <br>
+      <span id="theobjectName25"></span> in <span id="thenewCountry25"></span> is <span id="thenewPrice25"></span> <span id="thenewCurrency25"></span>
+      <br>
+      <span id="theobjectName26"></span> in <span id="thenewCountry26"></span> is <span id="thenewPrice26"></span> <span id="thenewCurrency26"></span>
+      <br>
+      <span id="theobjectName27"></span> in <span id="thenewCountry27"></span> is <span id="thenewPrice27"></span> <span id="thenewCurrency27"></span>
+      <br>
+      <span id="theobjectName28"></span> in <span id="thenewCountry28"></span> is <span id="thenewPrice28"></span> <span id="thenewCurrency28"></span>     
+      <br>
+      <br>
+      The basket in USD is $<span id="theBasketinUSD2"></span>
+      <br>        
+
+      
+    </p>
+
+  </main>
+      
+  </div>
+</div>
+<!-- <script>
+function getNation(){
+  countryquery=document.getElementById("countryinput").value;
+  var color0 = document.getElementById("countrybutton");
+  color0.style.backgroundColor="blue";
+  console.log("new country " + countryquery);
+}
+</script> -->
+  
+
+    <script src="bootstrap.bundle.min.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+
+    <script src="main.js"></script>
+    <script src="validatorentrieslive.js"></script>
+    </body>
+</html>
