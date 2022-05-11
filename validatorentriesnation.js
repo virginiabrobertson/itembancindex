@@ -1,4 +1,4 @@
-//this .js file used to update the countrydata.html page from the moralis database
+//this .js file was used to update the countrydata.html page from the moralis database
 
 getNewItemData1 = async () => {
     // this line is optional: const Item = Moralis.Object.extend("Items");

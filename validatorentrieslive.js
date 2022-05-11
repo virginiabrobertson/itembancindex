@@ -1,4 +1,4 @@
-//this .js file is alt for live entries to update the countrydata.html page from the moralis database
+//this .js file updates the countrydata.html page from the moralis database
 
 
 let countryquery= "United States";
