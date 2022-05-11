@@ -18,10 +18,14 @@ init = async () => {
 
 login = async () => {
     console.log("logged in");
-    await Moralis.Web3.authenticate().then(async function (user) {
+    await Moralis.authenticate({type: "sol"}).then(async function (user) {
         user.set("name", document.getElementById("uusername").value);
         user.set("email", document.getElementById("useremail").value);
         await user.save();
+    //await Moralis.Web3.authenticate().then(async function (user) {
+    //    user.set("name", document.getElementById("uusername").value);
+    //    user.set("email", document.getElementById("useremail").value);
+    //    await user.save();
     window.location.href= "itembancentry.html";
     })
 }
@@ -56,6 +60,12 @@ getAbout = async () => {
     window.location.href= "itembancabout.html";
 }
 
+getSee = async () => {
+    console.log('See data was clicked');
+    document.write("see charts");
+    window.location.href= "itembancseedata.html";
+}
+
 //getValidator = async () => {
 //    console.log('Validator was clicked');
 //    document.write("validator");
@@ -86,6 +96,9 @@ document.querySelector('#get-enginedata').onclick = getEngineData;
 }
 if(document.querySelector('#get-about') !=null){
 document.querySelector('#get-about').onclick = getAbout;
+}
+if(document.querySelector('#get-see') !=null){
+document.querySelector('#get-see').onclick = getSee;
 }
 
 

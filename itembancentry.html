@@ -172,11 +172,11 @@
 
 <script>
   class Item {
-    constructor (name, country, price, currency, quantity, unit, category, city ){
+    constructor (name, country, price, quantity, unit, category, city ){
     this.name=name;
     this.country=country;
     this.price=price;
-    this.currency=currency;
+   // this.currency=currency;
     this.quantity=quantity;
     this.unit=unit;
     this.category=category;
@@ -239,7 +239,7 @@
     Country=document.getElementById("newcountry").value;
     var color0 = document.getElementById("button0");
     color0.style.backgroundColor="blue";
-    console.log("new country " + Country);
+    console.log("new country for inputvalue0 is " + Country);
   }
 
   // function getInputValue01(){
@@ -258,8 +258,8 @@
       color1.style.backgroundColor="blue";
       setNewItemData1();
       setNewCountryData1();
-      defineNewObject("tunacan", Country, Tunacan.price, Currency, 1, "6oz", "food", "city" );
-      console.log("new tunacan price $" + Tunacan.price + " "+ Currency);
+      setNewVdata1();
+      console.log("new tunacan price $" + Tunacan.price + " "+ Country);
      }
     }else{
         getInputValue0();
@@ -273,7 +273,7 @@
       color2.style.backgroundColor="blue";
       setNewItemData2();
       setNewCountryData2();
-      defineNewObject("tomatocan", Country, Tomatocan.price, Currency, 1, "510g", "food", "city" );
+      setNewVdata2();
       console.log("new tomatocan price $" + Tomatocan.price);
     }
     }else{
@@ -288,7 +288,7 @@
       color3.style.backgroundColor="blue";
       setNewItemData3();
       setNewCountryData3();
-      defineNewObject("rice", Country, Rice.price, Currency, 1, "400g", "food", "city" ); 
+      setNewVdata3();
       console.log("new rice price $" + Rice.price);
       }
     }else{
@@ -303,7 +303,7 @@
       color4.style.backgroundColor="blue";
       setNewItemData4();
       setNewCountryData4();
-      defineNewObject("soap", Country, Soap.price, Currency, 1, "bar", "hygeine", "city" );
+      setNewVdata4();
       console.log("new soap price $" + Soap.price);
       }
     }else{
@@ -318,7 +318,7 @@
       color5.style.backgroundColor="blue";
       setNewItemData5(); 
       setNewCountryData5();
-      defineNewObject("water", Country, Water.price, Currency, 1, "400ml", "food", "city" );
+      setNewVdata5();
       console.log("new water price $" + Water.price);
     }
     }else{
@@ -333,7 +333,7 @@
       color6.style.backgroundColor="blue";
       setNewItemData6(); 
       setNewCountryData6();
-      defineNewObject("paper", Country, Paper.price, Currency, 1, "400 sheets", "paper", "city" );
+      setNewVdata6();
       console.log("new paper price $" + Paper.price);
     }
     }else{
@@ -348,7 +348,7 @@
       color7.style.backgroundColor="blue";
       setNewItemData7(); 
       setNewCountryData7();
-      defineNewObject("alcohol", Country, Alcohol.price, Currency, 1, "230ml", "hygeine", "city" );
+      setNewVdata7();
       console.log("new alcohol price $" + Alcohol.price);
     }
     }else{
@@ -363,7 +363,7 @@
       color8.style.backgroundColor="blue";
       setNewItemData8(); 
       setNewCountryData8();
-      defineNewObject("coffee", Country, Coffee.price, Currency, 1, "400g", "food", "city" );
+      setNewVdata8();
       console.log("new coffee price $" + Coffee.price);
     }
     }else{
@@ -378,7 +378,7 @@
       color9.style.backgroundColor="blue";
       setNewItemData9(); 
       setNewCountryData9();
-      defineNewObject("tea", Country, Tea.price, Currency, 1, "20 bags", "food", "city" );
+      setNewVdata9();
       console.log("new tea price $" + Tea.price);
     }
     }else{
@@ -393,7 +393,7 @@
       color10.style.backgroundColor="blue";
       setNewItemData10();
       setNewCountryData10();
-      defineNewObject("toiletpaper", Country, Toiletpaper.price, Currency, 1, "roll", "paper", "city" ); 
+      setNewVdata10();
       console.log("new toiletpaper price $" + Toiletpaper.price);
     }
     }else{
@@ -408,7 +408,7 @@
       color11.style.backgroundColor="blue";
       setNewItemData11(); 
       setNewCountryData11();
-      defineNewObject("socks", Country, Socks.price, Currency, 1, "pair", "clothing", "city" );
+      setNewVdata11();
       console.log("new socks price $" + Socks.price);
     }
     }else{
@@ -423,7 +423,7 @@
       color12.style.backgroundColor="blue";
       setNewItemData12(); 
       setNewCountryData12();
-      defineNewObject("lumber2412", Country, Lumber2412.price, Currency, 1, "board", "building materials", "city" );
+      setNewVdata12();
       console.log("new lumber2412 price $" + Lumber2412.price);
     }
     }else{
@@ -438,7 +438,7 @@
       color13.style.backgroundColor="blue";
       setNewItemData13();
       setNewCountryData13();
-      defineNewObject("ply4834", Country, Ply4834.price, Currency, 1, "sheet", "building materials", "city" );
+      setNewVdata13();
       console.log("new ply4834 price $" + Ply4834.price);
     }
     }else{
@@ -453,7 +453,7 @@
       color14.style.backgroundColor="blue";
       setNewItemData14(); 
       setNewCountryData14();
-      defineNewObject("tshirt", Country, Tshirt.price, Currency, 1, "white", "clothing", "city" );
+      setNewVdata14();
       console.log("new tshirt price $" + Tshirt.price);
     }
     }else{
@@ -476,7 +476,8 @@ setNewItemData1 = async () => {
    if(tunacan){
     tunacan.set("price", Tunacan.price);
     tunacan.set("country", Country);
-    tunacan.set("currency", Currency);
+    //tunacan.set("currency", Currency);
+    console.log(Tunacan.price+"Tunacan.price item set "+Country+"Country");
     await tunacan.save();
   }
   }
@@ -493,6 +494,21 @@ setNewItemData1 = async () => {
     await tunacanc.save();
   }
   }
+   setNewVdata1 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const tunaEntry= new Vdata();
+   if(Tunacan.price !== null){
+    tunaEntry.save("name", "tunacan");  
+    tunaEntry.save("price", Tunacan.price);
+    tunaEntry.save("country", Country);
+    tunaEntry.save("unit", "can");
+    tunaEntry.save("quantity", 1);
+    tunaEntry.save("city", "city");
+    tunaEntry.save("category", "food");
+    console.log(Tunacan.price+"Tunacan.price item set "+Country+"Country");
+    await tunaEntry.save();
+    }
+    }
 
   setNewItemData2 = async () => {
   const tomatoquery = new Moralis.Query('Items');
@@ -501,7 +517,7 @@ setNewItemData1 = async () => {
   if(tomatocan){
     tomatocan.set("price", Tomatocan.price);
     tomatocan.set("country", Country);
-    tomatocan.set("currency", Currency);
+    //tomatocan.set("currency", Currency);
     await tomatocan.save();
 }
 }
@@ -517,6 +533,21 @@ setNewCountryData2 = async () => {
     await tomatocanc.save();
   }
   }
+  setNewVdata2 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const tomatoEntry= new Vdata();
+   if(Tomatocan.price !== null){
+    tomatoEntry.save("name", "tomatocan");  
+    tomatoEntry.save("price", Tomatocan.price);
+    tomatoEntry.save("country", Country);
+    tomatoEntry.save("unit", "can");
+    tomatoEntry.save("quantity", 1);
+    tomatoEntry.save("city", "city");
+    tomatoEntry.save("category", "food");
+    console.log(Tomatocan.price+"Tomato.price item set "+Country+"Country");
+    await tomatoEntry.save();
+    }
+    }
 setNewItemData3 = async () => {
   const ricequery = new Moralis.Query('Items');
   ricequery.equalTo("name", "rice")
@@ -524,7 +555,7 @@ setNewItemData3 = async () => {
   if(rice){
     rice.set("price", Rice.price);
     rice.set("country", Country);
-    rice.set("currency", Currency);
+    //rice.set("currency", Currency);
     await rice.save();
 }
 }
@@ -540,6 +571,21 @@ setNewCountryData3 = async () => {
     await ricec.save();
   }
   }
+  setNewVdata3 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const riceEntry= new Vdata();
+   if(Rice.price !== null){
+    riceEntry.save("name", "rice");  
+    riceEntry.save("price", Rice.price);
+    riceEntry.save("country", Country);
+    riceEntry.save("unit", "bag");
+    riceEntry.save("quantity", 1);
+    riceEntry.save("city", "city");
+    riceEntry.save("category", "food");
+    console.log(Rice.price+"Rice.price item set "+Country+"Country");
+    await riceEntry.save();
+    }
+    }
 setNewItemData4 = async () => {
   const soapquery = new Moralis.Query('Items');
   soapquery.equalTo("name", "soap")
@@ -547,7 +593,7 @@ setNewItemData4 = async () => {
   if(soap){
     soap.set("price", Soap.price);
     soap.set("country", Country);
-    soap.set("currency", Currency);
+    //soap.set("currency", Currency);
     await soap.save();
 }
 }
@@ -563,6 +609,21 @@ setNewCountryData4 = async () => {
     await soapc.save();
   }
   }
+  setNewVdata4 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const soapEntry= new Vdata();
+   if(Soap.price !== null){
+    soapEntry.save("name", "soap");  
+    soapEntry.save("price", Soap.price);
+    soapEntry.save("country", Country);
+    soapEntry.save("unit", "bar");
+    soapEntry.save("quantity", 1);
+    soapEntry.save("city", "city");
+    soapEntry.save("category", "hygiene");
+    console.log(Soap.price+"Soap.price item set "+Country+"Country");
+    await soapEntry.save();
+    }
+    }
 setNewItemData5 = async () => {
   const waterquery = new Moralis.Query('Items');
   waterquery.equalTo("name", "water")
@@ -570,7 +631,7 @@ setNewItemData5 = async () => {
   if(water){
     water.set("price", Water.price);
     water.set("country", Country);
-    water.set("currency", Currency);
+    //water.set("currency", Currency);
     await water.save();
 }
 }
@@ -586,6 +647,21 @@ setNewCountryData5 = async () => {
     await waterc.save();
   }
   }
+  setNewVdata5 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const waterEntry= new Vdata();
+   if(Water.price !== null){
+    waterEntry.save("name", "water");  
+    waterEntry.save("price", Water.price);
+    waterEntry.save("country", Country);
+    waterEntry.save("unit", "bottle");
+    waterEntry.save("quantity", 1);
+    waterEntry.save("city", "city");
+    waterEntry.save("category", "food");
+    console.log(Water.price+"Water.price item set "+Country+"Country");
+    await waterEntry.save();
+    }
+    }
 setNewItemData6 = async () => {
   const paperquery = new Moralis.Query('Items');
   paperquery.equalTo("name", "paper")
@@ -593,7 +669,7 @@ setNewItemData6 = async () => {
   if(paper){
     paper.set("price", Paper.price);
     paper.set("country", Country);
-    paper.set("currency", Currency);
+    //paper.set("currency", Currency);
     await paper.save();
 }
 }
@@ -609,6 +685,21 @@ setNewCountryData6 = async () => {
     await paperc.save();
   }
   }
+  setNewVdata6 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const paperEntry= new Vdata();
+   if(Paper.price !== null){
+    paperEntry.save("name", "paper");  
+    paperEntry.save("price", Paper.price);
+    paperEntry.save("country", Country);
+    paperEntry.save("unit", "400 sheets");
+    paperEntry.save("quantity", 1);
+    paperEntry.save("city", "city");
+    paperEntry.save("category", "paper");
+    console.log(Paper.price+"Paper.price item set "+Country+"Country");
+    await paperEntry.save();
+    }
+    }
 setNewItemData7 = async () => {
   const alcoholquery = new Moralis.Query('Items');
   alcoholquery.equalTo("name", "alcohol")
@@ -616,7 +707,7 @@ setNewItemData7 = async () => {
   if(alcohol){
     alcohol.set("price", Alcohol.price);
     alcohol.set("country", Country);
-    alcohol.set("currency", Currency);
+    //alcohol.set("currency", Currency);
     await alcohol.save();
 }
 }
@@ -632,6 +723,21 @@ setNewCountryData7 = async () => {
     await alcoholc.save();
   }
   }
+  setNewVdata7 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const alcoholEntry= new Vdata();
+   if(Alcohol.price !== null){
+    alcoholEntry.save("name", "alcohol");  
+    alcoholEntry.save("price", Alcohol.price);
+    alcoholEntry.save("country", Country);
+    alcoholEntry.save("unit", "bottle");
+    alcoholEntry.save("quantity", 1);
+    alcoholEntry.save("city", "city");
+    alcoholEntry.save("category", "hygiene");
+    console.log(Alcohol.price+"Alcohol.price item set "+Country+"Country");
+    await alcoholEntry.save();
+    }
+    }
 setNewItemData8 = async () => {
   const coffeequery = new Moralis.Query('Items');
   coffeequery.equalTo("name", "coffee")
@@ -639,7 +745,7 @@ setNewItemData8 = async () => {
   if(coffee){
     coffee.set("price", Coffee.price);
     coffee.set("country", Country);
-    coffee.set("currency", Currency);
+    //coffee.set("currency", Currency);
     await coffee.save();
 }
 }
@@ -655,6 +761,21 @@ setNewCountryData8 = async () => {
     await coffeec.save();
   }
   }
+  setNewVdata8 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const coffeeEntry= new Vdata();
+   if(Coffee.price !== null){
+    coffeeEntry.save("name", "coffee");  
+    coffeeEntry.save("price", Coffee.price);
+    coffeeEntry.save("country", Country);
+    coffeeEntry.save("unit", "bag");
+    coffeeEntry.save("quantity", 1);
+    coffeeEntry.save("city", "city");
+    coffeeEntry.save("category", "food");
+    console.log(Coffee.price+"Coffee.price item set "+Country+"Country");
+    await coffeeEntry.save();
+    }
+    }
 setNewItemData9 = async () => {
   const teaquery = new Moralis.Query('Items');
   teaquery.equalTo("name", "tea")
@@ -662,7 +783,7 @@ setNewItemData9 = async () => {
   if(tea){
     tea.set("price", Tea.price);
     tea.set("country", Country);
-    tea.set("currency", Currency);
+    //tea.set("currency", Currency);
     await tea.save();
 }
 }
@@ -678,6 +799,21 @@ setNewCountryData9 = async () => {
     await teac.save();
   }
   }
+  setNewVdata9 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const teaEntry= new Vdata();
+   if(Tea.price !== null){
+    teaEntry.save("name", "tea");  
+    teaEntry.save("price", Tea.price);
+    teaEntry.save("country", Country);
+    teaEntry.save("unit", "bag");
+    teaEntry.save("quantity", 1);
+    teaEntry.save("city", "city");
+    teaEntry.save("category", "food");
+    console.log(Tea.price+"Tea.price item set "+Country+"Country");
+    await teaEntry.save();
+    }
+    }
 setNewItemData10 = async () => {
   const toiletpaperquery = new Moralis.Query('Items');
   toiletpaperquery.equalTo("name", "toiletpaper")
@@ -685,7 +821,7 @@ setNewItemData10 = async () => {
   if(toiletpaper){
     toiletpaper.set("price", Toiletpaper.price);
     toiletpaper.set("country", Country);
-    toiletpaper.set("currency", Currency);
+    //toiletpaper.set("currency", Currency);
     await toiletpaper.save();
 }
 }
@@ -701,6 +837,21 @@ setNewCountryData10 = async () => {
     await toiletpaperc.save();
   }
   }
+  setNewVdata10 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const toiletpaperEntry= new Vdata();
+   if(Toiletpaper.price !== null){
+    toiletpaperEntry.save("name", "toiletpaper");  
+    toiletpaperEntry.save("price", Toiletpaper.price);
+    toiletpaperEntry.save("country", Country);
+    toiletpaperEntry.save("unit", "roll");
+    toiletpaperEntry.save("quantity", 1);
+    toiletpaperEntry.save("city", "city");
+    toiletpaperEntry.save("category", "paper");
+    console.log(Toiletpaper.price+"Toiletpaper.price item set "+Country+"Country");
+    await toiletpaperEntry.save();
+    }
+    }
 setNewItemData11 = async () => {
   const socksquery = new Moralis.Query('Items');
   socksquery.equalTo("name", "socks")
@@ -708,7 +859,7 @@ setNewItemData11 = async () => {
   if(socks){
     socks.set("price", Socks.price);
     socks.set("country", Country);
-    socks.set("currency", Currency);
+    //socks.set("currency", Currency);
     await socks.save();
 }
 }
@@ -724,6 +875,21 @@ setNewCountryData11 = async () => {
     await socksc.save();
   }
   }
+  setNewVdata11 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const socksEntry= new Vdata();
+   if(Socks.price !== null){
+    socksEntry.save("name", "socks");  
+    socksEntry.save("price", Socks.price);
+    socksEntry.save("country", Country);
+    socksEntry.save("unit", "pair");
+    socksEntry.save("quantity", 1);
+    socksEntry.save("city", "city");
+    socksEntry.save("category", "clothing");
+    console.log(Socks.price+"Socks.price item set "+Country+"Country");
+    await socksEntry.save();
+    }
+    }
 setNewItemData12 = async () => {
   const lumber2412query = new Moralis.Query('Items');
   lumber2412query.equalTo("name", "lumber2412")
@@ -731,7 +897,7 @@ setNewItemData12 = async () => {
   if(lumber2412){
     lumber2412.set("price", Lumber2412.price);
     lumber2412.set("country", Country);
-    lumber2412.set("currency", Currency);
+    //lumber2412.set("currency", Currency);
     await lumber2412.save();
 }
 }
@@ -747,6 +913,21 @@ setNewCountryData12 = async () => {
     await lumber2412c.save();
   }
   }
+  setNewVdata12 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const lumber2412Entry= new Vdata();
+   if(Lumber2412.price !== null){
+    lumber2412Entry.save("name", "lumber2412");  
+    lumber2412Entry.save("price", Lumber2412.price);
+    lumber2412Entry.save("country", Country);
+    lumber2412Entry.save("unit", "board");
+    lumber2412Entry.save("quantity", 1);
+    lumber2412Entry.save("city", "city");
+    lumber2412Entry.save("category", "building materials");
+    console.log(Lumber2412.price+"Lumber2412.price item set "+Country+"Country");
+    await lumber2412Entry.save();
+    }
+    }
 setNewItemData13 = async () => {
   const ply4834query = new Moralis.Query('Items');
   ply4834query.equalTo("name", "ply4834")
@@ -754,7 +935,7 @@ setNewItemData13 = async () => {
   if(ply4834){
     ply4834.set("price", Ply4834.price);
     ply4834.set("country", Country);
-    ply4834.set("currency", Currency);
+    //ply4834.set("currency", Currency);
     await ply4834.save();
 }
 }
@@ -770,6 +951,21 @@ setNewCountryData13 = async () => {
     await ply4834c.save();
   }
   }
+  setNewVdata13 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const ply4834Entry= new Vdata();
+   if(Ply4834.price !== null){
+    ply4834Entry.save("name", "ply4834");  
+    ply4834Entry.save("price", Ply4834.price);
+    ply4834Entry.save("country", Country);
+    ply4834Entry.save("unit", "sheet");
+    ply4834Entry.save("quantity", 1);
+    ply4834Entry.save("city", "city");
+    ply4834Entry.save("category", "building materials");
+    console.log(Ply4834.price+"Ply4834.price item set "+Country+"Country");
+    await ply4834Entry.save();
+    }
+    }
 setNewItemData14 = async () => {
   const tshirtquery = new Moralis.Query('Items');
   tshirtquery.equalTo("name", "tshirt")
@@ -777,7 +973,7 @@ setNewItemData14 = async () => {
   if(tshirt){
     tshirt.set("price", Tshirt.price);
     tshirt.set("country", Country);
-    tshirt.set("currency", Currency);
+    //tshirt.set("currency", Currency);
     await tshirt.save();
 }
 }
@@ -796,6 +992,21 @@ setNewCountryData14 = async () => {
     await tshirtc.save();
   }
   }
+  setNewVdata14 = async () => {
+   const Vdata = Moralis.Object.extend('Vdata');
+   const tshirtEntry= new Vdata();
+   if(Tshirt.price !== null){
+    tshirtEntry.save("name", "tshirt");  
+    tshirtEntry.save("price", Tshirt.price);
+    tshirtEntry.save("country", Country);
+    tshirtEntry.save("unit", "shirt");
+    tshirtEntry.save("quantity", 1);
+    tshirtEntry.save("city", "city");
+    tshirtEntry.save("category", "clothing");
+    console.log(Tshirt.price+"Tshirt.price item set "+Country+"Country");
+    await tshirtEntry.save();
+    }
+    }
   // setNewCountryDataBasket = async () => {
   // const countryquery = new Moralis.Query('CountriesData');
   // countryquery.equalTo("Country", Country);

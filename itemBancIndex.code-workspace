@@ -12,9 +12,6 @@
 	],
 	"settings": {
 		"liveServer.settings.multiRootWorkspaceName": "Morales Session",
-		"liveServer.settings.CustomBrowser": "microsoft-edge",
-		"scm.alwaysShowActions": true,
-		"scm.alwaysShowRepositories": true,
-		"editor.showFoldingControls": "always"
+		"liveServer.settings.CustomBrowser": "microsoft-edge"
 	}
 }
