@@ -319,6 +319,26 @@ function displayCountry(newCountry, basketConvert, ibIndex, ibBasket, avgBasket)
         let showJapan= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
         document.getElementById("djapan").innerHTML=showJapan;
     }
+
+    if (newCountry === "Honduras"){
+        let showHonduras= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dhonduras").innerHTML=showHonduras;
+    }
+
+    if (newCountry === "Belarus"){
+        let showBelarus= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dbelarus").innerHTML=showBelarus;
+    }
+
+    if (newCountry === "Bolivia"){
+        let showBolivia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dbolivia").innerHTML=showBolivia;
+    }
+
+    if (newCountry === "Tunisia"){
+        let showTunisia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dtunisia").innerHTML=showTunisia;
+    }
     
 }
 
