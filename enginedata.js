@@ -340,5 +340,26 @@ function displayCountry(newCountry, basketConvert, ibIndex, ibBasket, avgBasket)
         document.getElementById("dtunisia").innerHTML=showTunisia;
     }
     
+    if (newCountry === "Argentina"){
+        let showArgentina= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dargentina").innerHTML=showArgentina;
+    }
+
+    if (newCountry === "Suriname"){
+        let showSuriname= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dsuriname").innerHTML=showSuriname;
+    } 
+    
+    if (newCountry === "Guyana"){
+        let showGuyana= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dguyana").innerHTML=showGuyana;
+    } 
+
+    if (newCountry === "Canada"){
+        let showCanada= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dcanada").innerHTML=showCanada;
+    } 
+
+    
 }
 
