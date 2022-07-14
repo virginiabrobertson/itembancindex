@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>item banc indicators/ by item</title>
+    <title>Item Banc indicators/ by item</title>
 
     <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">-->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">item banc</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Item Banc</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -487,12 +487,20 @@
       </p>
       <br>
       
-     
+      <button id='btn-gohome' class="w-100 btn btn-lg btn-primary" type="submit">Go Home</button>
+      <p class="mt-5 mb-3 text-muted"></p>
 
     </main>
   </div>
 </div>
-
+<script>
+goHome = async () => {
+    console.log('See data was clicked');
+    document.write("go to home page");
+    window.location.href= "index.html";
+} 
+document.getElementById("btn-gohome").onclick = goHome;
+</script>
 
 <script src="bootstrap.bundle.min.js"></script>
 

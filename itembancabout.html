@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>About item banc</title>
+    <title>About Item Banc</title>
 
     <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">-->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">item banc</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Item Banc</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -72,47 +72,59 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">About item banc</h1>
+        <h1 class="h2">About Item Banc</h1>
         
       </div>
 
       
  
-      <h3>item banc </h3>
+      <h3>Item Banc tokenizes information on what is available, where, at what relative value.
+        The Item Banc Index is a value-to-currency baseline generated from the specific information on the 
+        relative Cost of Basic Human Needs around the World. The Item Banc technology extends 
+        to create related information from the metadata of tokenized, real-world assets and services. </h3>
       <h5>
-        <br>an item banc stores prices of items that are basic human needs.
-        <br>these information deposits are made in real time by real people 
-        <br>and stored in a decentralized database.
-         <br> Item Banc Engine takes these deposits from around the world
-          <br> and uses them together to calculate a new kind of Value base, 
-          <br>similar to purchasing power parity, 
-          <br>where the same basic set of items are compared
-          <br> around the world to discover
-          <br> the relative values of currencies.
-         <br>This new Value base is the Item Banc Index.
-         <br>
-         <br>
-         <br>The people that enter (deposit) the prices we call Validators. 
-         <br> The Validators are rewarded with special tokens. 
-         <br>These tokens can be used to see prices deposited by other Validators.
-         <br>
-          <br>
-          <br>The tokens also pay for withdrawing Item Banc Index information as well.
-          <br> The Engine indexes the Values of currencies by comparing their 
-          <br> relative ability to purchase basic human needs. 
-          <br> 
-          <br> 
-          <br>There are about 100 or so basic items that we plan to
-          <br> represent in the Item Banc Index,
-          <br> and 180 world currencies.
-          <br> In our initial roll-out, we will focus on 14 items in five categories.
-         <br> Welcome! 
+        <br>The Item Banc secures its data by assimilating information "deposits" in real time by real people 
+        <br>about the prices of specific items that are basic human needs in decentralized databases. 
+        <br>
+        <br>The Item Banc Engine takes these deposits from around the world
+        <br>and uses them together to calculate a new kind of Value base that uses algorithms 
+        <br>similar to purchasing power parity, 
+        <br>where the same basic set of items are compared around the world to discover
+        <br> the relative values of currencies.
+        <br>This new Value base is the Item Banc Index.
+        <br>
+        <br>
+        <br>The people that enter (deposit) the prices we call Validators. 
+        <br>The Validators are rewarded with special tokens. 
+        <br>These tokens can be used to see prices deposited by other Validators.
+        <br>
+        <br>
+        <br>The tokens also pay for withdrawing special Item Banc Index information as well.
+        <br>The Engine indexes the Values of currencies by comparing their 
+        <br>relative ability to purchase basic human needs. 
+        <br> 
+        <br> 
+        <br>There are about 100 or so basic items that will be
+        <br>represented in the Item Banc Index,
+        <br>and 180 world currencies.
+        <br>In our initial roll-out, we focus on 14 items in five categories.
+        <br>Welcome! 
       </h5>
       
       <br>
        <br>
       <br>
+      <button id='btn-gohome' class="w-100 btn btn-lg btn-primary" type="submit">Go Home</button>
+      <p class="mt-5 mb-3 text-muted"></p>
       <p>
+        <script>
+        goHome = async () => {
+       console.log('See data was clicked');
+       document.write("go to home page");
+       window.location.href= "index.html";
+        } 
+        document.getElementById("btn-gohome").onclick = goHome;  
+        </script>
         
 
 <script src="bootstrap.bundle.min.js"
