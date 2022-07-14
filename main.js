@@ -1,39 +1,54 @@
-console.log("hello world");
- // connect to Moralis server
- Moralis.initialize("u1FbIwPPXoxa8qVa21ZtlJO5e3If5ISmzY4d4Ena");
- Moralis.serverURL = "https://whupladw0t5y.grandmoralis.com:2053/server";
+//Item Banc Main JS
+
+ // init to Moralis server
+ const serverUrl = "https://whupladw0t5y.grandmoralis.com:2053/server";
+ const appId = "u1FbIwPPXoxa8qVa21ZtlJO5e3If5ISmzY4d4Ena";
+ Moralis.start ({serverUrl, appId});
 
  let homepage = "http://127.0.0.1:5500/index.html";
 // if(Moralis.User.current() == null && window.location.href != homepage) {
 //    document.querySelector('body').style.display = 'none';
 //    window.location.href = "index.html";
 // }
-
-init = async () => {
-    window.web3 = await Moralis.Web3.enable();
-    const user = await Moralis.User.current();
-  }
-
-
-
-login = async () => {
-    console.log("logged in");
-    await Moralis.authenticate({type: "sol"}).then(async function (user) {
-        user.set("name", document.getElementById("uusername").value);
-        user.set("email", document.getElementById("useremail").value);
-        await user.save();
-    //await Moralis.Web3.authenticate().then(async function (user) {
-    //    user.set("name", document.getElementById("uusername").value);
-    //    user.set("email", document.getElementById("useremail").value);
-    //    await user.save();
-    window.location.href= "itembancentry.html";
-    })
-}
+// old init
+ //init = async () => {
+ //  window.web3 = await Moralis.Web3.enable();
+ //  let user = await Moralis.User.current();
+ // }
 
 
-logout = async () => {
+// Auth new way
+async function login() {
+   let user = Moralis.User.current();
+    if (!user) {
+        user = await Moralis.authenticate({
+         // type: "sol",
+          signingMessage: "Log in to itembanc",
+       })
+          .then(function (user) {
+            console.log("logged in user:", user);
+            console.log(user.get("ethAddress"));
+            window.location.href= "itembancentry.html";
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+    }
+    // changing auth test... old way below:
+    
+ //  user= await Moralis.authenticate().then(async function (user) {
+ //       user.set("name", document.getElementById("uusername").value);
+ //       user.set("email", document.getElementById("useremail").value);
+ //       await user.save();
+ // window.location.href= "itembancentry.html";
+ //   })
+//}
+
+
+logOut = async () => {
     await Moralis.User.logOut();
-    window.location.href="index.html";
+    console.log("logged out");
 }
 
 getItemData = async () => {
@@ -79,24 +94,25 @@ getSee = async () => {
    console.log("still here...");
 
 
-if(document.querySelector('#btn-login') != null){
-document.querySelector('#btn-login').onclick = login;
-}
-if(document.querySelector('#btn-logout') != null){
-document.querySelector('#btn-logout').onclick = logout;
-}
+document.getElementById("btn-login").onclick = login;
+
+document.getElementById("btn-logout").onclick = logOut;
+
 if(document.querySelector('#get-itemdata') != null){
 document.querySelector('#get-itemdata').onclick = getItemData;
 }
 if(document.querySelector('#get-nationdata') != null){
 document.querySelector('#get-nationdata').onclick = getNationData;
 }
-if(document.querySelector('#get-enginedata') != null){
-document.querySelector('#get-enginedata').onclick = getEngineData;
-}
-if(document.querySelector('#get-about') !=null){
-document.querySelector('#get-about').onclick = getAbout;
-}
+//if(document.querySelector('#get-enginedata') != null){
+//document.querySelector('#get-enginedata').onclick = getEngineData;
+//}
+document.getElementById("btn-enginedata").onclick = getEngineData;
+
+//if(document.querySelector('#get-about') !=null){
+//document.querySelector('#get-about').onclick = getAbout;
+//}
+document.getElementById("btn-about").onclick = getAbout;
 if(document.querySelector('#get-see') !=null){
 document.querySelector('#get-see').onclick = getSee;
 }
