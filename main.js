@@ -22,12 +22,12 @@ async function login() {
    let user = Moralis.User.current();
     if (!user) {
         user = await Moralis.authenticate({
-         // type: "sol",
+          type: "sol",
           signingMessage: "Log in to itembanc",
        })
           .then(function (user) {
             console.log("logged in user:", user);
-            console.log(user.get("ethAddress"));
+         //   console.log(user.get("ethAddress"));
             window.location.href= "itembancentry.html";
           })
           .catch(function (error) {
