@@ -360,6 +360,26 @@ function displayCountry(newCountry, basketConvert, ibIndex, ibBasket, avgBasket)
         document.getElementById("dcanada").innerHTML=showCanada;
     } 
 
+    if (newCountry === "UAE"){
+        let showUAE= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dUAE").innerHTML=showUAE;
+    }
+
+    if (newCountry === "StMaarten"){
+        let showStMaarten= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dstmaarten").innerHTML=showStMaarten;
+    }
+
+    if (newCountry === "Benin"){
+        let showBenin= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dbenin").innerHTML=showBenin;
+    }
+
+    if (newCountry === "Armenia"){
+        let showArmenia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("darmenia").innerHTML=showArmenia;
+    }
+
     
 }
 
