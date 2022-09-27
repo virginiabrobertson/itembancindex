@@ -380,6 +380,192 @@ function displayCountry(newCountry, basketConvert, ibIndex, ibBasket, avgBasket)
         document.getElementById("darmenia").innerHTML=showArmenia;
     }
 
+    if (newCountry === "Philippines"){
+        let showPhilippines= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dphilippines").innerHTML=showPhilippines;
+    }
+
+    if (newCountry === "Oman"){
+        let showOman= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("doman").innerHTML=showOman;
+    }
+
+    if (newCountry === "Bulgaria"){
+        let showBulgaria= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dbulgaria").innerHTML=showBulgaria;
+    }
+
+    if (newCountry === "Netherlands"){
+        let showNetherlands= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dnetherlands").innerHTML=showNetherlands;
+    }
+
+    if (newCountry === "Kazakhstan"){
+        let showKazakhstan= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dkazakhstan").innerHTML=showKazakhstan;
+    }
+
+    if (newCountry === "South Korea"){
+        let showSouthKorea= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dsouthkorea").innerHTML=showSouthKorea;
+    }
+
+    if (newCountry === "Germany"){
+        let showGermany= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dgermany").innerHTML=showGermany;
+    }
+
+    if (newCountry === "Thailand"){
+        let showThailand= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dthailand").innerHTML=showThailand;
+    }
+
+    if (newCountry === "Algeria"){
+        let showAlgeria= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dalgeria").innerHTML=showAlgeria;
+    }
+
+    if (newCountry === "Ecuador"){
+        let showEcuador= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("decuador").innerHTML=showEcuador;
+    }
+
+    if (newCountry === "Hungary"){
+        let showHungary= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dhungary").innerHTML=showHungary;
+    }
+
+    if (newCountry === "Uruguay"){
+        let showUruguay= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("duruguay").innerHTML=showUruguay;
+    }
+
+    if (newCountry === "Serbia"){
+        let showSerbia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dserbia").innerHTML=showSerbia;
+    }
+
+    if (newCountry === "Mexico"){
+        let showMexico= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dmexico").innerHTML=showMexico;
+    }
+
+    if (newCountry === "Costa Rica"){
+        let showCostaRica= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dcostarica").innerHTML=showCostaRica;
+    }
+
+    if (newCountry === "Greece"){
+        let showGreece= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dgreece").innerHTML=showGreece;
+    }
+
+    if (newCountry === "Lithuania"){
+        let showLithuania= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dlithuania").innerHTML=showLithuania;
+    }
+
+    if (newCountry === "Vietnam"){
+        let showVietnam= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dvietnam").innerHTML=showVietnam;
+    }
+
+    if (newCountry === "Bangladesh"){
+        let showBangladesh= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dbangladesh").innerHTML=showBangladesh;
+    }
+
+    if (newCountry === "Slovakia"){
+        let showSlovakia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dslovakia").innerHTML=showSlovakia;
+    }
+
+    if (newCountry === "Ireland"){
+        let showIreland= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("direland").innerHTML=showIreland;
+    }
+
+    if (newCountry === "Slovenia"){
+        let showSlovenia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dslovenia").innerHTML=showSlovenia;
+    }
+
+    if (newCountry === "Austria"){
+        let showAustria= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("daustria").innerHTML=showAustria;
+    }
+
+    if (newCountry === "Venezuela"){
+        let showVenezuela= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dvenezuela").innerHTML=showVenezuela;
+    }
+
+    if (newCountry === "Israel"){
+        let showIsrael= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("disrael").innerHTML=showIsrael;
+    }
+
+    if (newCountry === "Mongolia"){
+        let showMongolia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dmongolia").innerHTML=showMongolia;
+    }
+
+    if (newCountry === "North Macedonia"){
+        let showNorthMacedonia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dnorthmacedonia").innerHTML=showNorthMacedonia;
+    }
+
+    if (newCountry === "Croatia"){
+        let showCroatia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dcroatia").innerHTML=showCroatia;
+    }
+
+    if (newCountry === "Estonia"){
+        let showEstonia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("destonia").innerHTML=showEstonia;
+    }
+
+    if (newCountry === "Jordan"){
+        let showJordan= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("djordan").innerHTML=showJordan;
+    }
+
+    if (newCountry === "Sweden"){
+        let showSweden= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dsweden").innerHTML=showSweden;
+    }
+
+    if (newCountry === "Qatar"){
+        let showQatar= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dqatar").innerHTML=showQatar;
+    }
+
+    if (newCountry === "Finland"){
+        let showFinland= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dfinland").innerHTML=showFinland;
+    }
+
+    if (newCountry === "Cambodia"){
+        let showCambodia= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dcambodia").innerHTML=showCambodia;
+    }
+
+    if (newCountry === "Azerbaijan"){
+        let showAzerbaijan= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dazerbaijan").innerHTML=showAzerbaijan;
+    }
+
+    if (newCountry === "Mozambique"){
+        let showMozambique= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dmozambique").innerHTML=showMozambique;
+    }
+
+    if (newCountry === "Spain"){
+        let showSpain= newCountry+ "<br>" + " basket " + countryBasket + " "+ " is " + basketConvert + "% of world prices. Use "+ ibIndex +"% Index and "+ ibBasket+ " as Indexed Basket"+ "<br/>";
+        document.getElementById("dspain").innerHTML=showSpain;
+    }
+
+
     
 }
 
