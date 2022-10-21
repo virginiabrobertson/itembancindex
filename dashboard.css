@@ -1,5 +1,6 @@
 body {
   font-size: .875rem;
+  background-color:#def0f3;
 }
 
 .feather {
@@ -89,8 +90,8 @@ body {
 }
 
 .form-control-dark {
-  color: #fff;
-  background-color: rgba(255, 255, 255, .1);
+  color: rgb(#fff);
+  background-color: rgba(28, 58, 194, 0.1);
   border-color: rgba(255, 255, 255, .1);
 }
 
