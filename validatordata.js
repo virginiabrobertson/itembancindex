@@ -1,5 +1,4 @@
-//this .js file used for testing updates to the moralis database in itembancentry.html page
-
+//this .js file used for testing updates to the moralis database in itembancentry.html 
 
 getNewItemData0 = async () => {
     // this line is optional: const Item = Moralis.Object.extend("Items");
